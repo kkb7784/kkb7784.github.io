@@ -1,17 +1,41 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Webcafe-HTML5,CSS3</title>
+  <title>Web Cafe - HTML5,CSS3</title>
   <link rel="shortcut icon" href="images/common/favicon.ico">
   <link rel="stylesheet" href="css/stylesheet.css">
 </head>
 
 <body>
   <div class="wrapper">
-    <header class="header">헤더</header>
+    <header class="header">
+      <h1 class="logo">
+        <a href="index.html"><img src="images/rwd-logo.png" alt="web cafe"></a>
+      </h1>
+
+      <ul class="member">
+        <li><a href="#">로그인</a></li>
+        <li><a href="#">회원가입</a></li>
+        <li><a href="#">커뮤니티</a></li>
+      </ul>
+      <form action="javascript:alert('검색이 완료되었습니다.');" class="search">
+        <fieldset>
+          <legend class="hidden">검색 폼</legend>
+          <label class="hidden" for="search">검색어</label>
+          <input type="search" id="search" required placeholder="검색어를 입력하세요.">
+          <button class="btn-search" type="submit">검색</button>
+
+
+
+        </fieldset>
+
+
+      </form>
+
+    </header>
     <nav class="navigation">네비게이션</nav>
     <main class="main-content">
       <section class="recommend-book">추천서적</section>
