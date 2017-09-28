@@ -36,7 +36,6 @@ body {
 /*레이아웃*/
 
 .wrapper {
-  background: silver;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -127,8 +126,8 @@ body {
     width: 80%;
   }
   .header {
-    background: yellow;
     position: relative;
+    padding-bottom: 1rem;
   }
   .logo {
     position: absolute;
@@ -144,5 +143,24 @@ body {
     padding: 1rem 0.5rem;
     display: block;
     margin-left: 0.5rem;
+  }
+  .search-wrap {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .search input {
+    width: 400px;
+    height: 35px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    margin-right: 1rem;
+    padding: 0 0 0 1rem;
+  }
+  .btn-search {
+    background: #988574;
+    border: 1px solid #aaa;
+    color: #fff;
+    padding: 0 1rem;
+    border-radius: 5px;
   }
 }
