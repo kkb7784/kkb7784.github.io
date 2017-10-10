@@ -49,10 +49,6 @@ body {
   width: 100%;
 }
 
-.navigation {
-  background: pink;
-}
-
 .main-content {
   background: blue;
 }
@@ -119,7 +115,7 @@ body {
     height: 3000px;
   }
   .header,
-  .navigation,
+  .main-menu,
   .main-content,
   .slogan,
   .footer {
@@ -162,5 +158,25 @@ body {
     color: #fff;
     padding: 0 1rem;
     border-radius: 5px;
+  }
+  .navigation {
+    background: #988574;
+    border-top: 2px solid #222;
+    border-bottom: 2px solid #222;
+    padding: 1rem 0;
+  }
+  .main-menu {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+  }
+  .main-menu span {
+    font-size: 1rem;
+    font-weight: 700;
+    text-shadow: -1px 0 0 #000, 0 -1px 0 #000, 1px 0 0 #000, 0 1px 0 #000;
+  }
+  .sub-menu li {
+    margin: 0.5rem 0 0.5rem 0;
   }
 }
