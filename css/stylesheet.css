@@ -7,7 +7,7 @@
 
 .hidden {
   position: absolute;
-  left: -9999rem;
+  left: -9999em;
 }
 
 
@@ -33,12 +33,11 @@ body {
 }
 
 
-/*레이아웃*/
+/* 레이아웃 */
 
 .wrapper {
   display: flex;
   flex-direction: column;
-  height: 100vh;
 }
 
 .header,
@@ -79,8 +78,8 @@ body {
   }
   .member a {
     display: block;
-    padding: 0.5rem;
-    margin-left: 0.1rem;
+    padding: 0.5rem 1rem;
+    margin-left: 0.5rem
   }
   .logo {
     padding: 1rem;
@@ -105,19 +104,19 @@ body {
     height: 30px;
   }
   .menubar-container {
-    background: red;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 4rem;
+    right: 1rem;
     width: 40px;
     height: 40px;
+    overflow: hidden;
   }
   .btn-menubar {
-    width: 100%;
-    height: 100%;
     position: absolute;
     top: 0;
     right: 0;
+    width: 100%;
+    height: 100%;
     padding: 40px 0 0 0;
     border: 0;
     background: transparent;
@@ -128,9 +127,10 @@ body {
     display: block;
     width: 40px;
     height: 10px;
-    background: blue;
+    background: #fff;
     border-radius: 5px;
     cursor: pointer;
+    transition: all 0.2s;
   }
   .menubar-top {
     position: absolute;
@@ -141,17 +141,30 @@ body {
     position: absolute;
     top: 50%;
     right: 0;
-    transform: translateY(-50%)
+    transform: translateY(-50%);
   }
   .menubar-bottom {
     position: absolute;
     bottom: 0;
     right: 0;
   }
+  .menubar-act .menubar-top {
+    transform: rotate(45deg);
+    top: 50%;
+    margin-top: -5px;
+  }
+  .menubar-act .menubar-middle {
+    transform: translateX(-100%) translateY(-5px);
+  }
+  .menubar-act .menubar-bottom {
+    transform: rotate(-45deg);
+    top: 50%;
+    margin-top: -5px;
+  }
   .main-menu {
     transform: translateX(-100%);
     background: rgba(0, 0, 0, 0.85);
-    color: white;
+    color: #fff;
     position: fixed;
     top: 0;
     left: 0;
@@ -159,23 +172,27 @@ body {
     height: 100vh;
     padding: 2rem;
     box-sizing: border-box;
+    transition: all 0.2s;
+    font-size: 10px;
+  }
+  .menu-act {
+    transform: translateX(0);
   }
   .sub-menu {
     list-style: circle;
     padding-left: 2rem;
   }
   .sub-menu li {
-    margin: 0.5rem;
+    margin: 0.5rem 0;
   }
 }
 
 
 /* 데스크탑 */
 
-@media all and (min-width: 1000px) {
+@media all and (min-width:1000px) {
   .wrapper {
     align-items: center;
-    height: 3000px;
   }
   .header,
   .main-menu,
@@ -199,8 +216,8 @@ body {
     justify-content: flex-end;
   }
   .member a {
-    padding: 1rem 0.5rem;
     display: block;
+    padding: 1rem 0.5rem;
     margin-left: 0.5rem;
   }
   .search-wrap {
@@ -212,15 +229,15 @@ body {
     height: 35px;
     border: 1px solid #aaa;
     border-radius: 5px;
-    margin-right: 1rem;
     padding: 0 0 0 1rem;
+    margin-right: 1rem;
   }
   .btn-search {
-    background: #988574;
     border: 1px solid #aaa;
+    border-radius: 5px;
+    background: #988574;
     color: #fff;
     padding: 0 1rem;
-    border-radius: 5px;
   }
   .navigation {
     background: #988574;
@@ -243,6 +260,6 @@ body {
     text-shadow: -1px 0 0 #000, 0 -1px 0 #000, 1px 0 0 #000, 0 1px 0 #000;
   }
   .sub-menu li {
-    margin: 0.5rem 0 0.5rem 0;
+    margin: 0.5rem 0 0.5rem 0.5rem;
   }
 }
