@@ -88,63 +88,99 @@
     </nav>
     <main class="main-content">
       <section class="recommend-book">
-        <h2 class="recommned-book-heading main-content-heading">
+        <h2 class="recommend-book-heading main-content-heading">
           추천 서적
-          <span class="en-heading">Recommend book</span>
+          <span class="en-heading">Recommend Book</span>
         </h2>
+        <figure class="recommend-book-cover">
+          <img class="responsive" src="images/book_rwd.jpg" alt="웹표준 핵심 가이드북 개정판" title="책에 대한 정보는 하단 내용 참조">
+          <figcaption>웹표준 핵심가이드북 HTML5+CSS3</figcaption>
+        </figure>
+        <dl class="recommend-book-detail">
+          <dt>저자</dt>
+          <dd>김데레사</dd>
+          <dt class="hidden">평점</dt>
+          <dd class="recommend-book-grade" aria-label="5점 만점에 5점">★★★★★</dd>
+        </dl>
+        <p>웹표준 핵심 가이드북 HTML5&amp;CSS3 개정판이 새로운 예제로 출간되었습니다. 많은 성원 부탁드립니다.</p>
       </section>
-      <section class="news ">새소식
-        <h2 class="news main-content-heading">
+      <section class="news">
+        <h2 class="news-heading main-content-heading">
           새소식
-          <span class="en-heading">News</span>
+          <span class="en-heading">Webcafe News</span>
         </h2>
+        <video class="responsive" controls poster="media/poster.jpg" preload="none" width="800" height="448">
+          <source src="media/google-developer-stories.webm" type="video/webm; codecs=&quot;vp8, vorbis&quot;">
+          <track src="media/video-subtitles-en.vtt" kind="captions" srclang="en" label="English captions" default="">
+        </video>
+        <p>웹표준 핵심가이드 북 개정판 출판을 기념하여 저자의 강의가 있었습니다. 많은 분들이 강의에 참석을 해주셨으며 웹에 대한 많은 이야기를 나눌 수 있는 소중한 시간이었습니다.</p>
+        <time datetime="2018-01-31">2018.01.31</time>
       </section>
-      <section class="board">게시판
-        <h2 class="board main-content-heading">
+      <section class="board">
+        <h2 class="board-heading main-content-heading">
           게시판
-          <span class="en-heading">Board</span>
+          <span class="en-heading">Webcafe Board</span>
         </h2>
+        <ul>
+          <li>
+            <a href="#">HTML의 모든것을 알려주마 샘플 활용법</a>
+            <time datetime="2018-01-31T14:03:30">2018.01.31</time>
+          </li>
+          <li>
+            <a href="#">W3C 사이트 리뉴얼 및 공지사항</a>
+            <time datetime="2018-01-31T14:03:30">2018.01.31</time>
+          </li>
+          <li>
+            <a href="#">KWCAG2.0 소식</a>
+            <time datetime="2018-01-31T14:03:30">2018.01.31</time>
+          </li>
+          <li>
+            <a href="#">서버 점검으로 인한 사이트 이용안내 입니다.</a>
+            <time datetime="2018-01-31T14:03:30">2018.01.31</time>
+          </li>
+          <li>
+            <a href="#">여러분들이 생각하는 웹 접근성에 대해 이야기를 나누어 봅시다.</a>
+            <time datetime="2018-01-31T14:03:30">2018.01.31</time>
+          </li>
+        </ul>
+        <a href="#" class="board-more" title="공지사항">더보기</a>
       </section>
-      <section class="favorite-site">인기 사이트
-        <h2 class="favorite-site main-content-heading">
+      <section class="favorite-site">
+        <h2 class="favorite-site-heading main-content-heading">
           인기 사이트
-          <span class="en-heading">Favorite site</span>
+          <span class="en-heading">Favorite Site</span>
         </h2>
+        <ol>
+          <li>css Layout</li>
+          <li>Flexbox Froggy</li>
+          <li>Grid Garden</li>
+          <li>MDN Web Doc</li>
+        </ol>
       </section>
-      <section class="twitter">트위터
-        <h2 class="twitter main-content-heading">
+      <section class="twitter">
+        <h2 class="twitter-heading main-content-heading">
           웹카페 트위터
           <span class="en-heading">Webcafe Twitter</span>
         </h2>
+        <p class="twitter-profile">
+          <img src="images/seulbinim.jpg" aria-labelledby="user">
+        </p>
+        <p class="twitter-user" id="user">
+          강기복@kkb7784
+        </p>
+        <p class="twitter-content">
+          웹표준 핵심 가이드북 개정판 출시 기념으로 세미나를 준비했습니다. 참석을 원하시는 분들은 트위터로 문의하시기 바랍니다.
+
+        </p>
+        <time class="twitter-date" datetime="2017-10-19T19:14:30">5분전</time>
+
       </section>
     </main>
     <article class="slogan">슬로건</article>
     <footer class="footer">푸터</footer>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="js/menu.js">
-    // $(document).ready(function() {
-    //   var btn_bar = $('.btn-menubar, .menubar');
-    //   var container = $('.menubar-container');
-    //   var menu = $('.main-menu');
-    //   var act = $('.menubar-act');
-    //   var btn = $('.btn-menubar');
-    //   var last = $('.main-menu > li:last-child li:last-child a');
-    //   btn_bar.click(function() {
-    //     container.toggleClass('menubar-act');
-    //     menu.toggleClass('menu-act');
-    //     if (container.hasClass('menubar-act')) {
-    //       btn.text('메인메뉴 닫기');
-    //     } else {
-    //       btn.text('메인메뉴 열기');
-    //     }
-    //   });
-    //   last.focusout(function() {
-    //     container.removeClass('menubar-act');
-    //     menu.removeClass('menu-act');
-    //   });
-    // });
-  </script>
+  <script src="js/menu.js"></script>
 </body>
 
 </html>

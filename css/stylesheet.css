@@ -25,6 +25,14 @@ a:focus {
 }
 
 
+/* 반응형 콘텐츠 */
+
+.responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+
 /* 본문 스타일 */
 
 body {
@@ -48,8 +56,191 @@ body {
   width: 100%;
 }
 
+
+/* 메인 콘텐츠 */
+
 .main-content {
-  background: blue;
+  padding: 0 1rem;
+}
+
+
+/* 메인 콘텐츠 제목 공통 */
+
+.main-content-heading {
+  margin: 1rem 0;
+  padding-left: 65px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  height: 60px;
+  background: url('images/sprite_main.png') no-repeat;
+}
+
+.en-heading {
+  display: block;
+}
+
+.recommend-book-heading span {
+  color: #abd375;
+}
+
+.news-heading span {
+  color: #e8ca58;
+}
+
+.board-heading span {
+  color: #c7b39a;
+}
+
+.favorite-site-heading span {
+  color: #eea60a;
+}
+
+.twitter-heading span {
+  color: #6aaee6;
+}
+
+.news-heading {
+  background-position: 0 -230px;
+}
+
+.board-heading {
+  background-position: 0 -115px;
+}
+
+.favorite-site-heading {
+  background-position: 0 -345px;
+}
+
+.twitter-heading {
+  background-position: 0 -460px;
+}
+
+
+/* 추천 서적 */
+
+.recommend-book,
+.news,
+.board,
+.favorite-site {
+  border-bottom: 2px solid #999;
+  padding-bottom: 1rem;
+}
+
+.recommend-book-cover {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.recommend-book-detail {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.recommend-book-detail dt,
+.recommend-book-detail dd {
+  display: inline;
+}
+
+.recommend-book-grade {
+  display: block!important;
+  color: #abd375;
+  font-size: 1.5rem;
+}
+
+
+/* 새소식 */
+
+.news p {
+  margin: 1rem 0;
+}
+
+.news time {
+  display: block;
+  text-align: right;
+}
+
+
+/* 게시판 */
+
+.board li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.board li a {
+  width: calc(100% - 100px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.board time {
+  display: block;
+  width: 100px;
+  text-align: right;
+}
+
+.board {
+  position: relative;
+}
+
+.board-more::before {
+  content: "+";
+  color: hsla(100, 100%, 20%, 1);
+  margin-right: 0.3rem;
+  font-weight: 700;
+}
+
+.board-more {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+
+/*  인기사이트 */
+
+.favorite-site ol {
+  overflow: hidden;
+}
+
+.favorite-site li {
+  counter-increment: number;
+}
+
+.favorite-site li::before {
+  content: counter(number, decimal);
+  background: #f00;
+  color: #fff;
+  font-size: 0.8rem;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+
+/* 트위터 */
+
+.twitter-profile {
+  width: 20%;
+  float: right;
+  text-align: right;
+}
+
+.twitter-profile img {
+  border: 1px solid #aaa;
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+
+.twitter-date {
+  clear: both;
+  display: block;
+  text-align: right;
 }
 
 .slogan {
