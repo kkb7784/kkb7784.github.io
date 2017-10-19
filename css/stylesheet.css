@@ -52,7 +52,7 @@ body {
 .navigation,
 .main-content,
 .slogan,
-.footer {
+.footer-bg {
   width: 100%;
 }
 
@@ -185,21 +185,21 @@ body {
   position: relative;
 }
 
-.board-more::before {
+.board-more {
+  position: absolute;
+  top: 1rem;
+  right: 0;
+}
+
+.board-more:before {
   content: "+";
   color: hsla(100, 100%, 20%, 1);
   margin-right: 0.3rem;
   font-weight: 700;
 }
 
-.board-more {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
 
-
-/*  인기사이트 */
+/* 인기 사이트 */
 
 .favorite-site ol {
   overflow: hidden;
@@ -209,7 +209,7 @@ body {
   counter-increment: number;
 }
 
-.favorite-site li::before {
+.favorite-site li:before {
   content: counter(number, decimal);
   background: #f00;
   color: #fff;
@@ -238,17 +238,19 @@ body {
 }
 
 .twitter-date {
-  clear: both;
   display: block;
+  clear: both;
   text-align: right;
 }
 
-.slogan {
-  background: orange;
+.footer-bg {
+  background: #988574;
 }
 
-.footer {
-  background: lime;
+address,
+.copyright {
+  color: #fff;
+  margin: 0.5rem 0;
 }
 
 
@@ -376,6 +378,21 @@ body {
   .sub-menu li {
     margin: 0.5rem 0;
   }
+  .slogan {
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+  }
+  .slogan-heading {
+    position: absolute;
+    left: -9999em;
+  }
+  .footer {
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+  }
+  address span {
+    display: block;
+  }
 }
 
 
@@ -388,8 +405,7 @@ body {
   .header,
   .main-menu,
   .main-content,
-  .slogan,
-  .footer {
+  .slogan {
     width: 80%;
   }
   .header {
@@ -446,11 +462,74 @@ body {
     color: #fff;
   }
   .main-menu span {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 700;
     text-shadow: -1px 0 0 #000, 0 -1px 0 #000, 1px 0 0 #000, 0 1px 0 #000;
   }
   .sub-menu li {
     margin: 0.5rem 0 0.5rem 0.5rem;
+  }
+  .main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .recommend-book {
+    width: 34%;
+  }
+  .news {
+    width: 64%;
+  }
+  .board {
+    width: 36%;
+  }
+  .twitter {
+    width: 36%;
+  }
+  .twitter-profile {
+    padding-right: 1.2rem;
+  }
+  .favorite-site {
+    order: 1;
+  }
+  .favorite-site ol {
+    margin-left: 1.5rem;
+  }
+  .board,
+  .twitter,
+  .favorite-site {
+    margin: 20px 0;
+  }
+  .recommend-book,
+  .news,
+  .board,
+  .favorite-site {
+    border-bottom: 0;
+  }
+  .slogan {
+    padding: 1rem 0;
+    position: relative;
+  }
+  .slogan-heading {
+    position: absolute;
+    left: 0;
+    bottom: -25px;
+    box-sizing: border-box;
+    width: 110px;
+    height: 83px;
+    padding-top: 83px;
+    overflow: hidden;
+    background: url('images/coffee.png') no-repeat;
+  }
+  .slogan-content {
+    margin: 0 3rem 0 10rem;
+  }
+  .slogan-content q {
+    font-weight: 700;
+  }
+  .footer {
+    width: 80%;
+    margin: 0 auto;
+    padding: 1rem 1rem 1rem 15rem;
   }
 }
